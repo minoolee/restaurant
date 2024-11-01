@@ -7,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
 
         String[] tableNames = {"Standard", "Family", "Couple"};
-        DaysOfWeek day = DaysOfWeek.FRIDAY;
+        //DaysOfWeek day = DaysOfWeek.FRIDAY;
         String[] time = {"09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"};
         boolean[][][] reservation = new boolean[tableNames.length][DaysOfWeek.values().length][time.length];
         Scanner input = new Scanner(System.in);
 
-        int table = 0;
-        int dayInput = 0;
-        int timeInput = 0;
+        int table;
+        int dayInput;
+        int timeInput ;
         reservation[1][3][6]= true;
         do {
             for (int i = 0; i < tableNames.length; i++) {
