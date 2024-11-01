@@ -1,8 +1,5 @@
-
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
@@ -14,8 +11,8 @@ public class Main {
 
         int table;
         int dayInput;
-        int timeInput ;
-        reservation[1][3][6]= true;
+        int timeInput;
+        reservation[1][3][6] = true;
         do {
             for (int i = 0; i < tableNames.length; i++) {
                 System.out.println(i + 1 + ":" + tableNames[i]);
