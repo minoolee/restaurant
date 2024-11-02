@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         String[] tableNames = {"Standard", "Family", "Couple"};
-        //DaysOfWeek day = DaysOfWeek.FRIDAY;
+        DaysOfWeek day = DaysOfWeek.FRIDAY;
         String[] time = {"09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"};
         boolean[][][] reservation = new boolean[tableNames.length][DaysOfWeek.values().length][time.length];
         Scanner input = new Scanner(System.in);
@@ -37,6 +37,21 @@ public class Main {
             if (reservation[table - 1][dayInput - 1][timeInput - 1]) {
                 System.out.println("Table already taken");
             }
+            // next step
+            for (int i = 0; i < reservation.length; i++) {
+                System.out.println(tableNames[i]);
+
+                for (int j = 0; j < DaysOfWeek.values().length; j++) {
+                    System.out.println(DaysOfWeek.values()[j]);
+                    for (int t = 0; t < time.length; t++) {
+                        if (!reservation[i][j][t]) {
+                            System.out.print(time[t] + " ");
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+
         } while (reservation[table - 1][dayInput - 1][timeInput - 1]);
 
 
